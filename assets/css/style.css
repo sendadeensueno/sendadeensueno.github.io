@@ -13,9 +13,19 @@ body {
   border: none;
   height: 100px;
 }
+
+.navbar-header {
+  height: 100px;
+}
+
+.navbar-toggle {
+  margin-top: 25px;
+}
+
 .navbar-collapse.in {
   background-color: rgba(21, 52, 84, 0.5) !important;
 }
+
 .navbar-default .navbar-nav {
   margin-right: 0.5em;
   margin: 0;
@@ -83,7 +93,6 @@ body {
   /*background: rgba(0,0,0,0.3);*/
 }
 .about {
-  display: inline-block;
   width: 100%;
   /*padding-top: 1em;*/
   /*background-color: #f0f0f0;*/
@@ -94,8 +103,8 @@ body {
 
 .about > div:first-child {
     background: rgba(0,0,0,0.3);
-    height: 100vh;
-    padding-top: 1em;
+    height: 100%;
+    padding-top: 50px;
 }
 
 .about .container-fluid {
@@ -155,7 +164,6 @@ body {
 }
 
 .instalations {
-  display: inline-block;
   width: 100%;
   /*padding-top: 1em;*/
   background-color: #929292;
@@ -165,7 +173,7 @@ body {
 
 .instalations > div:first-child {
     background: rgba(0,0,0,0.3);
-    height: 100vh;
+    height: 100%;
     padding-top: 1em;
 }
 
@@ -289,7 +297,6 @@ body {
 }
 
 .project {
-  display: inline-block;
   width: 100%;
   /*padding-top: 1em;*/
   background-color: #044c75;
@@ -299,7 +306,7 @@ body {
 
 .project > div:first-child {
     /*background: rgba(0,0,0,0.3);*/
-    height: 100vh;
+    height: 100%;
     padding-top: 1em;
 }
 
@@ -345,7 +352,6 @@ body {
 }
 
 .contact {
-  display: inline-block;
   width: 100%;
   /*padding-top: 1em;*/
   background-color: #2b2b2b;
@@ -414,8 +420,11 @@ body {
   font-weight: 400;
 }
 
-.footer div {
+.footer div:first-child {
   display: inline-block;
+}
+.footer > div:first-child {
+  width: 100%;
 }
 .footer i {
   margin: 0 0.5em;
@@ -944,6 +953,10 @@ body {
     /*flex-direction: column;*/
     display: block;
   }
+  .instalations .container-fluid {
+    /*flex-direction: column;*/
+    display: block;
+  }
   .about > div:first-child {
     height: 100%;
   }
@@ -976,12 +989,61 @@ body {
   .footer .policy a:first-child {
     margin-right: 0.2em;
   }
+  .instalations > div:first-child {
+    padding-top: 100px;
+  }
+  .instalations .puzzle-1 {
+    left: inherit;
+    top: -85px;
+    right: 0;
+    width: 50%;
+  }
+  .instalations .puzzle-1 img {
+    left: 40px;
+    top: 5px;
+  }
+  .instalations .puzzle-2 {
+    left: 0px;
+    top: -85px;
+    width: 50%;
+  }
+  .instalations .puzzle-2 img {
+    left: -15px;
+    top: 35px;
+  }
+  .instalations .puzzle-3 {
+    left: inherit;
+    top: -5px;
+    right: 0;
+    width: 50%;
+  }
+  .instalations .puzzle-3 img {
+    left: 40px;
+    top: -45px;
+  }
+  .instalations .puzzle-4 {
+    left: -5px;
+    top: -15px;
+    width: 50%;
+  }
+  .instalations .puzzle-4 img {
+    left: -10px;
+    top: -5px;
+  }
+  #bottomSide {
+    margin-bottom: 3em;
+  }
 }
 @media all and (max-width: 465px) {
   .about .profile {
     width: 80%;
   }
-  .banner-footters h1 {
-    font-size: 1em;
+  .footer div:first-child {
+    display: block;
+    text-align: center;
+  }
+  .policy {
+    float: none !important;
+    margin-top: 0.5em;
   }
 }

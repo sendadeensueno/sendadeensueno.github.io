@@ -28,17 +28,23 @@ $('#contact-link').click(function() {
    var scroll = $(window).scrollTop();
    var height = $(window).height();
    var navbar = $('.navbar-default');
+   var navbarHeader = $('.navbar-header');
+   var navbarToggle = $('.navbar-toggle');
    var nav = $('.navbar-nav');
    var logo = $('.navbar-brand img');
    if (scroll > (height - 10)) {
      navbar.css("height", 50);
+     navbarHeader.css("height", 50);
      nav.css("margin-top", 0);
+     navbarToggle.css("margin-top", 8);
      logo.attr("src","");
      logo.attr("src","assets/img/logo-2.png");
      logo.css("width", 250);
    } else {
      navbar.css("height", 100);
+     navbarHeader.css("height", 100);
      nav.css("margin-top", 25);
+     navbarToggle.css("margin-top", 25);
      logo.attr("src","");
      logo.attr("src","assets/img/logo.png");
      logo.css("width", 150);
@@ -63,17 +69,27 @@ function rightText(element) {
   })
   $('#' + element).show(1000);
 };
+function bottomText(element) {
+  $('#bottomSide > div').each(function() {
+    $(this).hide(1000);
+  })
+  $('#' + element + 'B').show(1000);
+};
 $('#animals-click').click(function() {
   leftText('animals');
+  bottomText('animals');
 });
 $('#activities-click').click(function() {
   leftText('activities');
+  bottomText('activities');
 });
 $('#classroom-click').click(function() {
   rightText('classroom');
+  bottomText('classroom');
 });
 $('#chicken-click').click(function() {
   rightText('chicken');
+  bottomText('chicken');
 });
 
 });
