@@ -167,7 +167,7 @@ body {
   width: 100%;
   /*padding-top: 1em;*/
   background-color: #929292;
-  min-height: 100vh;
+  min-height: 100%;
   background-size: cover;
 }
 
@@ -298,7 +298,7 @@ body {
 
 .project {
   width: 100%;
-  /*padding-top: 1em;*/
+  padding-top: 1em;
   background-color: #044c75;
   min-height: 100%;
   background-size: cover;
@@ -349,6 +349,12 @@ body {
 }
 .project .evaluation .title {
   color: #4be179;
+}
+.project .read-more {
+  margin-bottom: 5%;
+}
+.project .read {
+  display: none;
 }
 
 .contact {

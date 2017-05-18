@@ -92,4 +92,40 @@ $('#chicken-click').click(function() {
   bottomText('chicken');
 });
 
+$('#read-more-objetive').click(function() {
+  var button = $('#read-more-objetive');
+  var text = $('#read-objetive');
+  readMore(button, text)
+})
+$('#read-more-methodology').click(function() {
+  var button = $('#read-more-methodology');
+  var text = $('#read-methodology');
+  readMore(button, text)
+})
+$('#read-more-evaluation').click(function() {
+  var button = $('#read-more-evaluation');
+  var text = $('#read-evaluation');
+  readMore(button, text)
+})
+
+function readMore(button, text) {
+  resetMore();
+  if(text.is(':hidden')){
+    button.text('Leer menos');
+    text.show(1000);
+  } else {
+    button.text('Leer más');
+    text.hide(1000);
+  }
+}
+
+function resetMore() {
+  $('.read-more button').each(function() {
+    $(this).text('Leer más');
+  })
+  $('.read').each(function() {
+    $(this).hide(1000);
+  })
+}
+
 });
